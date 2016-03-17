@@ -1,0 +1,13 @@
+﻿Build started 16/03/2016 19:19:08.
+     1>Project "C:\Users\gabri\Desktop\PhysX Tutorials\Basic Program\Basic Program.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\3.3.4\include" /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt "Basic Program.cpp"
+         Basic Program.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Basic Program.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\3.3.4\Lib\vc14win64" PhysX3CommonDEBUG_x64.lib PhysX3ExtensionsDEBUG.lib PhysXVisualDebuggerSDKDEBUG.lib PhysX3DEBUG_x64.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Basic Program.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Basic Program.lib" /MACHINE:X64 "x64\Debug\Basic Program.obj"
+         Basic Program.vcxproj -> C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Basic Program.exe
+     1>Done Building Project "C:\Users\gabri\Desktop\PhysX Tutorials\Basic Program\Basic Program.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.05

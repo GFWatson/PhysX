@@ -1,0 +1,33 @@
+﻿Build started 17/03/2016 08:42:02.
+     1>Project "C:\Users\gabri\Desktop\PhysX Tutorials\Tutorial 3\Tutorial 3.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\3.3.4\include" /I.\Graphics\include\win32 /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt PhysicsEngine.cpp "Tutorial 3.cpp" VisualDebugger.cpp
+         VisualDebugger.cpp
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\basicactors.h(61): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\basicactors.h(62): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\myphysicsengine.h(291): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\myphysicsengine.h(294): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\myphysicsengine.h(303): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+         PhysicsEngine.cpp
+         Generating Code...
+         Compiling...
+         Tutorial 3.cpp
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\basicactors.h(61): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\basicactors.h(62): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\myphysicsengine.h(291): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\myphysicsengine.h(294): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+     1>c:\users\gabri\desktop\physx tutorials\tutorial 3\myphysicsengine.h(303): warning C4305: 'argument': truncation from 'double' to 'physx::PxReal'
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Tutorial 3.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\NVIDIA Corporation\NVIDIA PhysX SDK\3.3.4\lib\vc14win64" /LIBPATH:.\Graphics\lib\win64\glut PhysX3CommonDEBUG_x64.lib PhysX3ExtensionsDEBUG.lib PhysXVisualDebuggerSDKDEBUG.lib PhysX3DEBUG_x64.lib PhysX3CookingDEBUG_x64.lib glut32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Tutorial 3.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Tutorial 3.lib" /MACHINE:X64 x64\Debug\Camera.obj
+         x64\Debug\GLFontRenderer.obj
+         x64\Debug\Renderer.obj
+         x64\Debug\PhysicsEngine.obj
+         x64\Debug\VisualDebugger.obj
+         "x64\Debug\Tutorial 3.obj"
+         Tutorial 3.vcxproj -> C:\Users\gabri\Desktop\PhysX Tutorials\x64\Debug\Tutorial 3.exe
+     1>Done Building Project "C:\Users\gabri\Desktop\PhysX Tutorials\Tutorial 3\Tutorial 3.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.15
