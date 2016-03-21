@@ -124,6 +124,7 @@ namespace PhysicsEngine
 	public:
 		//an example variable that will be checked in the main simulation loop
 		bool trigger, reset;
+		int curScore = 0;
 		PxRigidActor* hitObject;
 
 		MySimulationEventCallback() : trigger(false), reset(false) {}
@@ -144,6 +145,7 @@ namespace PhysicsEngine
 						trigger = true;
 						reset = true;
 						hitObject = pairs[i].triggerActor->is<PxRigidActor>();
+						curScore++;
 					}
 					//check if eNOTIFY_TOUCH_LOST trigger
 					if (pairs[i].status & PxPairFlag::eNOTIFY_TOUCH_LOST)
@@ -225,6 +227,7 @@ namespace PhysicsEngine
 		MySimulationEventCallback* my_callback;
 		RevoluteJoint* rJoint;
 		bool reset;
+		int curScore;
 		
 	public:
 
@@ -250,6 +253,9 @@ namespace PhysicsEngine
 			px_scene->setSimulationEventCallback(my_callback);
 			reset = false;
 
+			//initialise score
+			curScore = 0;
+
 			//Floor that is background to game
 			plane = new Plane();
 			plane->Color(PxVec3(210.f/255.f,210.f/255.f,210.f/255.f));
@@ -267,7 +273,7 @@ namespace PhysicsEngine
 			//Ball
 			//High restitution to bounce, set to ballActor for use in visual debugger
 			ball = new Sphere(PxTransform(PxVec3(-4.f, .1f, -4.f)), .1f);
-			PxMaterial* myMaterial2 = CreateMaterial(0.f, 0.f, 1.6f);
+			PxMaterial* myMaterial2 = CreateMaterial(0.f, 0.f, 1.65f);
 			ball->Material(myMaterial2);
 			ballActor = ball->Get()->is<PxRigidDynamic>();
 			Add(ball);
@@ -326,7 +332,7 @@ namespace PhysicsEngine
 			if (reset) {
 				//Move target brick out of game area
 				my_callback->hitObject->setGlobalPose(PxTransform(PxVec3(50.f, 1.f, 0.f)));
-
+				curScore = my_callback->curScore;
 			}
 
 		}
@@ -341,6 +347,10 @@ namespace PhysicsEngine
 		void ExampleKeyPressHandler()
 		{
 			cerr << "I am pressed!" << endl;
+		}
+
+		int getScore() {
+			return curScore;
 		}
 	};
 }

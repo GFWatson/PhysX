@@ -47,6 +47,8 @@ namespace VisualDebugger
 	bool key_state[MAX_KEYS];
 	bool hud_show = true;
 	HUD hud;
+	int curScore;
+	std::string scoreLine;
 
 	//Init the debugger
 	void Init(const char *window_name, int width, int height)
@@ -69,6 +71,10 @@ namespace VisualDebugger
 
 		//initialise HUD
 		HUDInit();
+
+		//set current score
+		scoreLine = "Score: 0";
+		curScore = 0;
 
 		///Assign callbacks
 		//render
@@ -93,26 +99,14 @@ namespace VisualDebugger
 	void HUDInit()
 	{
 		//initialise HUD
+		scoreLine = "Score: " + to_string(curScore);
 		//add an empty screen
 		hud.AddLine(EMPTY, "");
 		//add a help screen
 		hud.AddLine(HELP, " Simulation");
-		hud.AddLine(HELP, "    F9 - select next actor");
-		hud.AddLine(HELP, "    F10 - pause");
-		hud.AddLine(HELP, "    F12 - reset");
-		hud.AddLine(HELP, "");
-		hud.AddLine(HELP, " Display");
-		hud.AddLine(HELP, "    F5 - help on/off");
-		hud.AddLine(HELP, "    F6 - shadows on/off");
-		hud.AddLine(HELP, "    F7 - render mode");
-		hud.AddLine(HELP, "");
-		hud.AddLine(HELP, " Camera");
-		hud.AddLine(HELP, "    W,S,A,D,Q,Z - forward,backward,left,right,up,down");
-		hud.AddLine(HELP, "    mouse + click - change orientation");
-		hud.AddLine(HELP, "    F8 - reset view");
-		hud.AddLine(HELP, "");
-		hud.AddLine(HELP, " Force (applied to the selected actor)");
-		hud.AddLine(HELP, "    I,K,J,L,U,M - forward,backward,left,right,up,down");
+		hud.AddLine(HELP, "J + L to move paddle");
+		hud.AddLine(HELP, "B to start game");
+		hud.AddLine(HELP, scoreLine);
 		//add a pause screen
 		hud.AddLine(PAUSE, "");
 		hud.AddLine(PAUSE, "");
@@ -170,6 +164,13 @@ namespace VisualDebugger
 
 		//perform a single simulation step
 		scene->Update(delta_time);
+
+		//get current score from scene
+		curScore = scene->getScore();
+		hud.Clear();		
+		HUDInit();
+
+
 	}
 
 	//user defined keyboard handlers
@@ -251,7 +252,7 @@ namespace VisualDebugger
 			}			break;
 			
 		case 'B':
-			scene->GetBall()->addForce(PxVec3(.4f, 0.f, 0.4f));
+			scene->GetBall()->addForce(PxVec3(.45f, 0.f, 0.45f));
 			break;
 			
 		default:
